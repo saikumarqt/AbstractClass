@@ -45,6 +45,8 @@ namespace AbstractClass
      *  A class which contains abstract members and non abstact members is 
      called abstract class which is partially implemented class.
     Abstract class cannot be instanciated but we can create reference varibale,
+
+    I have added new line.
      */
     abstract class vehicle
     {
