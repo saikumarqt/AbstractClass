@@ -57,6 +57,7 @@ namespace AbstractClass
         internal void drive()
         {
             Console.WriteLine("vehicle has been driving");
+            Console.WriteLine("Hello All");
         }
         internal abstract void park();
         internal abstract void stop();
