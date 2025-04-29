@@ -6,6 +6,21 @@ using System.Threading.Tasks;
 
 namespace AbstractClass
 {
+ abstract class myclass
+    {
+        public void Method()
+        {
+            Console.WriteLine("Method is calling");
+        }
+        public abstract void AbstractMethod();
+    }
+    class derivedclass:myclass
+    {
+        public override void AbstractMethod()
+        {
+            Console.WriteLine("Abstract method is calling");
+        }
+    }
    
     /*
      * AbstractClass: While Defining a class if we have used Abstract
@@ -21,7 +36,8 @@ namespace AbstractClass
      * declartion
      *  with in the abstract class ,we have to define or we have to 
      *  implement
-     *  these abstract members with in the derived class by using override keyword
+     *  these abstract members with in the derived class by using override
+     *  keyword
      *  
      *  What do you mean declaration and definition?
      *  ex:internal void show()//declartion
@@ -34,7 +50,7 @@ namespace AbstractClass
      *  ex:internal abstract void show();
      *  we cannot have abstract constructor
      *  Abstract class can contain constructor which is non abstract.
-     *  Abstract class members access modifiers should be non private
+     *  Abstract class members access modifiers should be not private
      *  because we should implement these abstract members in derived
      *  class by using override keyword
      *  static members cannot be abstract.
@@ -44,7 +60,8 @@ namespace AbstractClass
      *  abstact class or concrete class and it is fully implemented class.
      *  A class which contains abstract members and non abstact members is 
      called abstract class which is partially implemented class.
-    Abstract class cannot be instanciated but we can create reference varibale,
+    Abstract class cannot be instanciated but we can create reference 
+    varibale,
 
     I have added new line.
      */
@@ -82,6 +99,10 @@ namespace AbstractClass
     {
         static void Main(string[] args)
         {
+            myclass mc=new derivedclass();
+            mc.Method();    
+            mc.AbstractMethod();
+            
             vehicle obj=new dc();
             obj.start();
             obj.drive();
